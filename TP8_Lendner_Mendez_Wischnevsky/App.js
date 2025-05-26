@@ -14,7 +14,19 @@ function ScreenA1() {
   return (
     <View style={styles.homeScreen}>
       <Text style={styles.text}>HOME</Text>
-      ...
+
+
+      <Text style={styles.description}>
+        Primer Stack - Primer Screen
+        {'\n\n'}
+        Boton para navegar a ScreenA2
+        {'\n'}
+        navigation.navigate('ScreenA2').
+        {'\n'}
+      </Text>
+      <Button title="Ir A ScreenA2" onPress={() => navigation.navigate('ScreenA2')} />
+
+
     </View>
   );
 }
@@ -24,28 +36,26 @@ function ScreenA2() {
   return (
     <View style={styles.homeScreen}>
       <Text style={styles.text}>HOME 2</Text>
-      ...
+      
+
+      <Text style={styles.description}>
+        Primer Stack - Segunda Screen
+        {'\n\n'}
+        *Boton para navegar a ScreenA1
+        {'\n'}
+        navigation.navigate('ScreenA1')
+        {'\n'}
+      </Text>
+      <Button title="Ir A ScreenA1" onPress={() => navigation.navigate('ScreenA1')} />
+
+
     </View>
   );
 }
 
 // Screens del Primer Stack
-function ScreenB1() {
-  const navigation = useNavigation();
-  return (
-    <View style={styles.homeScreen}>
-      <Text style={styles.text}>HOME 2</Text>
-      ...
-    </View>
-  );}
-function ScreenB2() {
-  const navigation = useNavigation();
-  return (
-    <View style={styles.homeScreen}>
-      <Text style={styles.text}>HOME 2</Text>
-      ...
-    </View>
-  );}
+function ScreenB1() {...}
+function ScreenB2() {...}
 
 // Screens del Tercer Stack
 function ScreenC1() {...}
