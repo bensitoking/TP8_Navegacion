@@ -122,9 +122,9 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home"     component={StackANavigator} />
-      <Tab.Screen name="Buscador" component={StackBNavigator} />
-      <Tab.Screen name="Perfil"   component={StackCNavigator}
+      <Tab.Screen name="Home A"     component={StackANavigator} />
+      <Tab.Screen name="Home B" component={StackBNavigator} />
+      <Tab.Screen name="Home C"   component={StackCNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="person" size={24} color={color} />
