@@ -82,12 +82,40 @@ function ScreenC2() {
   );
 }
 
+// Screens del cuarto stack
+
+
+function ScreenD1() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME</Text>
+
+      ...
+
+    </View>
+  );
+}
+function ScreenD2() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME 2</Text>
+
+      ...
+
+    </View>
+  );
+}
+
+
 //
 // Creación de los stacks
 //
 const StackA = createNativeStackNavigator();
 const StackB = createNativeStackNavigator();
 const StackC = createNativeStackNavigator();
+const StackD = createNativeStackNavigator();
  
 function StackANavigator() {
   return (
@@ -115,6 +143,15 @@ function StackCNavigator() {
   );
 }
 
+function StackDNavigator() {
+  return (
+    <StackD.Navigator>
+      <StackD.Screen name="ScreenD1" component={ScreenD1} />
+      <StackD.Screen name="ScreenD2" component={ScreenD2} />
+    </StackD.Navigator>
+  );
+}
+
 //
 // Creación del BottomTabNavigator
 //
@@ -131,6 +168,7 @@ function MyTabs() {
            ),
         }}
       />
+      <Tab.Screen name="Home D"   component={StackDNavigator}/>
     </Tab.Navigator>
   );
 }
