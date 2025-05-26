@@ -15,17 +15,7 @@ function ScreenA1() {
     <View style={styles.homeScreen}>
       <Text style={styles.text}>HOME</Text>
 
-
-      <Text style={styles.description}>
-        Primer Stack - Primer Screen
-        {'\n\n'}
-        Boton para navegar a ScreenA2
-        {'\n'}
-        navigation.navigate('ScreenA2').
-        {'\n'}
-      </Text>
-      <Button title="Ir A ScreenA2" onPress={() => navigation.navigate('ScreenA2')} />
-
+      ...
 
     </View>
   );
@@ -36,30 +26,61 @@ function ScreenA2() {
   return (
     <View style={styles.homeScreen}>
       <Text style={styles.text}>HOME 2</Text>
-      
 
-      <Text style={styles.description}>
-        Primer Stack - Segunda Screen
-        {'\n\n'}
-        *Boton para navegar a ScreenA1
-        {'\n'}
-        navigation.navigate('ScreenA1')
-        {'\n'}
-      </Text>
-      <Button title="Ir A ScreenA1" onPress={() => navigation.navigate('ScreenA1')} />
-
+      ...
 
     </View>
   );
 }
 
 // Screens del Primer Stack
-function ScreenB1() {...}
-function ScreenB2() {...}
+
+function ScreenB1() { 
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME</Text>
+
+      ...
+
+    </View>
+  );}
+function ScreenB2() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME 2</Text>
+
+      ...
+
+    </View>
+  );
+}
 
 // Screens del Tercer Stack
-function ScreenC1() {...}
-function ScreenC2() {...}
+
+function ScreenC1() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME</Text>
+
+      ...
+
+    </View>
+  );
+}
+function ScreenC2() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homeScreen}>
+      <Text style={styles.text}>HOME 2</Text>
+
+      ...
+
+    </View>
+  );
+}
 
 //
 // Creación de los stacks
@@ -77,8 +98,22 @@ function StackANavigator() {
   );
 }
 
-function StackBNavigator() {...}
-function StackCNavigator() {...}
+function StackBNavigator() {
+  return (
+    <StackB.Navigator>
+      <StackB.Screen name="ScreenB1" component={ScreenB1} />
+      <StackB.Screen name="ScreenB2" component={ScreenB2} />
+    </StackB.Navigator>
+  );
+}
+function StackCNavigator() {
+  return (
+    <StackC.Navigator>
+      <StackC.Screen name="ScreenC1" component={ScreenC1} />
+      <StackC.Screen name="ScreenC2" component={ScreenC2} />
+    </StackC.Navigator>
+  );
+}
 
 //
 // Creación del BottomTabNavigator
